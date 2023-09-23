@@ -1,0 +1,11 @@
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.csproj.AssemblyReference.cache
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.Form1.resources
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.Properties.Resources.resources
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.csproj.GenerateResource.cache
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.csproj.CoreCompileInputs.cache
+C:\Users\User\senr0w\PaintForms\PaintForms\bin\Debug\PaintForms.exe.config
+C:\Users\User\senr0w\PaintForms\PaintForms\bin\Debug\PaintForms.exe
+C:\Users\User\senr0w\PaintForms\PaintForms\bin\Debug\PaintForms.pdb
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.exe
+C:\Users\User\senr0w\PaintForms\PaintForms\obj\Debug\PaintForms.pdb
