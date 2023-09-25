@@ -7,15 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Button = System.Windows.Forms.Button;
 
 namespace PaintForms
 {
     public partial class Form1 : Form
     {
+        private enum Shape { Line, Rectangle, Circle }
+
+        private Shape selectedShape;
+
         public Form1()
         {
             InitializeComponent();
             SetSize();
+            selectedShape = Shape.Line;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -52,6 +59,7 @@ namespace PaintForms
                 return points;
             }
         }
+
         private bool DrawMouse=false;
         private ArrayPoints arrayPoints=new ArrayPoints(2);
         Bitmap map=new Bitmap(100,100);
@@ -68,13 +76,58 @@ namespace PaintForms
         private void Holst_MouseDown(object sender, MouseEventArgs e)
             {
              DrawMouse= true;
-            Refresh();
+            switch (selectedShape)
+            {
+                case Shape.Line:
+                    // Рисование линии
+                    Point startPoint = new Point(e.X, e.Y);
+                    Point endPoint = new Point(e.X + 50, e.Y + 50);
+                    using (Graphics graphics = CreateGraphics())
+                    {
+                        graphics.DrawLine(Pens.Black, startPoint, endPoint);
+                    }
+                    break;
+                case Shape.Rectangle:
+                    // Рисование прямоугольника
+                    Rectangle rect = new Rectangle(e.X, e.Y, 50, 50);
+                    using (Graphics graphics = CreateGraphics())
+                    {
+                        graphics.DrawRectangle(Pens.Black, rect);
+                    }
+                    break;
+                case Shape.Circle:
+                    // Рисование круга
+                    Rectangle circleRect = new Rectangle(e.X, e.Y, 50, 50);
+                    using (Graphics graphics = CreateGraphics())
+                    {
+                        graphics.DrawEllipse(Pens.Black, circleRect);
+                    }
+                    break;
+            }
+
+        
+        }  
+        private void ShapeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (ShapeBox.SelectedIndex)
+            {
+                case 0:
+                    selectedShape = Shape.Line;
+                    break;
+                case 1:
+                    selectedShape = Shape.Rectangle;
+                    break;
+                case 2:
+                    selectedShape = Shape.Circle;
+                    break;
+            }
+
         }
          private void Holst_MouseUp(object sender, MouseEventArgs e)
             {
             DrawMouse = false;
             arrayPoints.ResetPoint();
-            Refresh();
+           
         }
         private void Holst_MouseMove(object sender, MouseEventArgs e)
         {
@@ -86,7 +139,8 @@ namespace PaintForms
                 Circle.Image = map;
                 arrayPoints.SetPoint(e.X,e.Y);
             }
-            Refresh();
+
+      
         }
     
         private void Color_Click(object sender, EventArgs e)
@@ -126,9 +180,6 @@ namespace PaintForms
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-           
-        }
+      
     }
 }

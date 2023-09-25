@@ -33,6 +33,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.ColorsPanel = new System.Windows.Forms.Panel();
+            this.ChangeColor = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Yellow = new System.Windows.Forms.Button();
             this.Pink = new System.Windows.Forms.Button();
@@ -47,14 +49,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button = new System.Windows.Forms.Button();
-            this.ChangeColor = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.Square = new System.Windows.Forms.Button();
-            this.Triangle = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.ShapeBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Circle)).BeginInit();
             this.ColorsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -120,6 +118,30 @@
             this.ColorsPanel.Name = "ColorsPanel";
             this.ColorsPanel.Size = new System.Drawing.Size(189, 78);
             this.ColorsPanel.TabIndex = 3;
+            // 
+            // ChangeColor
+            // 
+            this.ChangeColor.BackColor = System.Drawing.Color.Transparent;
+            this.ChangeColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangeColor.Image = ((System.Drawing.Image)(resources.GetObject("ChangeColor.Image")));
+            this.ChangeColor.Location = new System.Drawing.Point(151, 32);
+            this.ChangeColor.Name = "ChangeColor";
+            this.ChangeColor.Size = new System.Drawing.Size(30, 23);
+            this.ChangeColor.TabIndex = 10;
+            this.ChangeColor.Text = "?";
+            this.ChangeColor.UseVisualStyleBackColor = false;
+            this.ChangeColor.Click += new System.EventHandler(this.ChangeColor_Click);
+            // 
+            // button
+            // 
+            this.button.BackColor = System.Drawing.Color.Blue;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button.Location = new System.Drawing.Point(151, 3);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(30, 23);
+            this.button.TabIndex = 9;
+            this.button.UseVisualStyleBackColor = false;
+            this.button.Click += new System.EventHandler(this.Color_Click);
             // 
             // label1
             // 
@@ -251,47 +273,12 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.Triangle);
-            this.panel2.Controls.Add(this.Square);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.ShapeBox);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(385, 16);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 78);
             this.panel2.TabIndex = 5;
-            // 
-            // button
-            // 
-            this.button.BackColor = System.Drawing.Color.Blue;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Location = new System.Drawing.Point(151, 3);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(30, 23);
-            this.button.TabIndex = 9;
-            this.button.UseVisualStyleBackColor = false;
-            this.button.Click += new System.EventHandler(this.Color_Click);
-            // 
-            // ChangeColor
-            // 
-            this.ChangeColor.BackColor = System.Drawing.Color.Transparent;
-            this.ChangeColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeColor.Image = ((System.Drawing.Image)(resources.GetObject("ChangeColor.Image")));
-            this.ChangeColor.Location = new System.Drawing.Point(151, 32);
-            this.ChangeColor.Name = "ChangeColor";
-            this.ChangeColor.Size = new System.Drawing.Size(30, 23);
-            this.ChangeColor.TabIndex = 10;
-            this.ChangeColor.Text = "?";
-            this.ChangeColor.UseVisualStyleBackColor = false;
-            this.ChangeColor.Click += new System.EventHandler(this.ChangeColor_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 52);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -302,21 +289,18 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Фигуры";
             // 
-            // Square
+            // ShapeBox
             // 
-            this.Square.Location = new System.Drawing.Point(98, 4);
-            this.Square.Name = "Square";
-            this.Square.Size = new System.Drawing.Size(64, 52);
-            this.Square.TabIndex = 7;
-            this.Square.UseVisualStyleBackColor = true;
-            // 
-            // Triangle
-            // 
-            this.Triangle.Location = new System.Drawing.Point(191, 4);
-            this.Triangle.Name = "Triangle";
-            this.Triangle.Size = new System.Drawing.Size(64, 52);
-            this.Triangle.TabIndex = 7;
-            this.Triangle.UseVisualStyleBackColor = true;
+            this.ShapeBox.FormattingEnabled = true;
+            this.ShapeBox.Items.AddRange(new object[] {
+            "Линия",
+            "Квадрат",
+            "Круг"});
+            this.ShapeBox.Location = new System.Drawing.Point(68, 3);
+            this.ShapeBox.Name = "ShapeBox";
+            this.ShapeBox.Size = new System.Drawing.Size(121, 21);
+            this.ShapeBox.TabIndex = 1;
+            this.ShapeBox.SelectedIndexChanged += new System.EventHandler(this.ShapeBox_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -367,11 +351,9 @@
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button Triangle;
-        private System.Windows.Forms.Button Square;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColorDialog colorDialog2;
+        private System.Windows.Forms.ComboBox ShapeBox;
     }
 }
 
