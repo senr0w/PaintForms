@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\bin\Debug\Samostoyatelnaya.exe.config
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\bin\Debug\Samostoyatelnaya.exe
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\bin\Debug\Samostoyatelnaya.pdb
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.Form1.resources
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.Properties.Resources.resources
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.exe
+C:\Users\User\source\repos\Samostoyatelnaya\Samostoyatelnaya\obj\Debug\Samostoyatelnaya.pdb
